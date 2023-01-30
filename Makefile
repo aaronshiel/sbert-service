@@ -8,6 +8,8 @@ $(VENV):
 .PHONY: install
 install: poetry-ensure-installed
 	poetry config --local virtualenvs.in-project true
+	python --version
+	poetry env list
 	poetry env use python3.10
 	poetry install
 
