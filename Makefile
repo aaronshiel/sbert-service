@@ -8,9 +8,7 @@ $(VENV):
 .PHONY: install
 install: poetry-ensure-installed
 	poetry config --local virtualenvs.in-project true
-	poetry env list
-	python --version
-	poetry env use python3.8
+	poetry env use python3.10
 	poetry install
 
 .PHONY docker-build:
